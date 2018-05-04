@@ -1,0 +1,9 @@
+version: '2'
+services:
+  rancher-openvpn-client:
+    build: https://github.com/ceffji/rancher-os-openvpn-client-service.git
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - CONFIG_URL=http://www.example.com/example.ovpn
+      - SECRET=secret
